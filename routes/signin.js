@@ -11,7 +11,7 @@ require('../db/mongoose')
 
 router.get('/', function(req, res, next) {
   res.render('signin', { title: 'Our School',name:'varun'});
-  console.log(req.session);
+ // console.log(req.session);
 });
 
 router.post('/', async (req,res)=>{

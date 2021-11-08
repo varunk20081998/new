@@ -10,7 +10,7 @@ const store=new MongoDBSession({
 
 const isAuth=(req,res,next)=>{
   if(req.session.isAuth){
-    req.session.isAuth=true
+    req.session.isAuth=false
       next()
 
       
