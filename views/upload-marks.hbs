@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+</head>
+<body>
+    <div class="d-flex justify-content-center">
+ <h1 style="font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:10px;
+    padding-right: 10px;
+    width:770px;
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    color: black;
+    background-color: white;
+    text-align: center;
+    opacity: 0.8;
+   border-radius: 30px;">{{title}}</h1>
+    </div>
+   
+<div class="d-flex justify-content-center">
+<form class="upload-table" action="/upload-marks" method="post">
+<table id="upload-table" class="display">
+    <thead class="thead">
+        <tr>
+            <th>Roll-No.</th>
+            <th>class</th>
+            <th>Name</th>
+            <th>Maths mark</th>
+            <th>Science mark</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+    {{#each user}}
+       
+      
+       <tr>  
+
+    <td>
+     <input type="number" name="rollno" style="text-decoration: none;" value={{this.rollno}} readonly>
+    </td>
+    
+    <td > {{this.class}}</td>
+    <td> {{this.name}}</td>
+    <td>
+        <input type="number" name="maths" value={{this.maths}} placeholder="enter marks">
+    </td>
+    <td>
+        <input type="number" name="science" value={{this.science}} placeholder="enter marks">
+    </td>
+       
+    </tr>
+     {{/each}}
+            
+    </tbody><br>
+</table>
+<br>
+<div class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-primary btn-lg">post</button>
+</div>
+            
+<br><br>
+      
+
+</form>
+</div>
+
+
+    
+<br><br>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+
+<script>
+    $(document).ready( function () {
+    $('#upload-table').DataTable();
+} );
+</script>
+
+
+</html>
+
+
+
+
+
+
+

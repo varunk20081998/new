@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-center">
+<h1 style="font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bolder;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:10px;
+    padding-right: 10px;
+    width:770px;
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    color: black;
+    background-color: white;
+    text-align: center;
+    opacity: 0.8;
+   border-radius: 30px;">Hi {{title}} this is your mark page </h1>
+</div>
+
+
+
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th>Roll-No.</th>
+            <th>class</th>
+           
+            <th>Maths mark</th>
+            <th>Science mark</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        
+
+       <tr>  
+
+    <td>
+     {{user.rollno}} 
+    </td>
+    
+    <td >{{user.class}} </td>
+   
+    <td>
+      {{user.maths}}
+    </td>
+    <td>
+        {{user.science}} 
+    </td>
+       
+       
+    </tr>
+     
+    </tbody><br>
+</table>

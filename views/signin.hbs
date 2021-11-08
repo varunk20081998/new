@@ -1,0 +1,61 @@
+<div class="d-flex justify-content-center">
+<h1 class="sh1" style="font-family: 'Rampart One', cursive;" >Lets Create a New World!!</h1>
+</div>
+
+
+
+    <h5 style=" background-color:lemonchiffon; opacity:0.88; color:green; text-align:center; margin-top:20px; border-radius:100px;"> {{message1}} </h5>
+
+
+
+<div class="d-flex justify-content-center">
+    <div class="signin ">
+<h3 class="d-flex justify-content-center" style="margin-bottom:20px ;">Login here</h3>
+<p style="color: red;">{{message}}</p>
+<form action="/signin" method="post">
+ 
+     <div class="row">
+         <div class="col d-flex justify-content-center">
+                  <input type="text" class="form-outline" name="username"  placeholder="User name " required>
+         </div>
+     </div>
+<br>
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+                <input type="password" class="form-outline" name="password"  placeholder=" password" required>
+        </div>
+
+    </div>
+
+<br>
+
+<div class="d-flex justify-content-center">
+    <div class="form-check form-check-inline">
+        <input type="radio" id="teacher" name="person" value="teacher">
+    <label for="teacher">Teacher</label>
+    </div>
+    
+
+<div class="form-check form-check-inline">
+<input type="radio" id="student" name="person" value="student">
+<label for="student" >Student</label><br>
+</div>
+
+
+</div>
+<br>
+
+<div class="d-flex justify-content-center">
+
+<button type="submit" class="btn btn-primary btn-md ">Login</button>
+</div>
+
+
+</form>
+
+
+</div>
+
+</div>
+    
+{{>footer}}

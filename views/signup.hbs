@@ -1,0 +1,162 @@
+{{!-- 
+<h1 >Welcome to Sign up page! {{name}}</h1>
+<p id='error' style="color: red;">{{error}}</p>
+<form action="/signup" method="post">
+           <input type="text" name="name" class="form-control" placeholder="name " required > <span style="color: red; float:left">*</span> <br>       
+             <input type="text" name="username" class="form-control" placeholder="user name"  required> <span style="color: red;">*</span><br>
+          <input type="email" name="email" class="form-control" placeholder="Email"  required> <span style="color: red;">*</span> <br>
+          <input type="password" name="password" class="form-control"  placeholder="password"  required> <span style="color: red;">*</span> <br>
+            <input type="password" name="cpassword" class="form-control"  placeholder="confirm password"  required> <span style="color: red;">*</span> <br>
+             <input type="number" name="rollno" class="form-control" placeholder="roll_no"required > <span style="color: red;">*</span><br>
+            <input type="text" name="address" class="form-control" placeholder="address"><br>
+              <input type="tel" name="phone" class="form-control" placeholder="number"><br><br>
+
+    <input type="radio" id="8"  name="class" value=8>
+<label for="8">8th</label>
+
+<input type="radio" id="9"  name="class" value=9>
+<label for="9">9th</label>
+
+<input type="radio" id="10"  name="class" value=10>
+<label for="10">10th</label><br><br>
+  
+  <button type="submit" class="btn btn-primary btn-md" >Sign up</button>
+</form> --}}
+
+
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Sign up Form</h3>
+            <p id='error' style="color: red;">{{error}}</p>
+            <form action="/signup" method="post">
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="firstName" class="form-control form-control-lg" name="name" placeholder="Name" required > <span style="color: red; float:left">*</span> <br>
+                    
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    
+                    <input type="text" id="lastName" class="form-control form-control-lg" name="username"  placeholder="User name"  required> <span style="color: red;">*</span>
+                   
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    
+                    <input type="email" class="form-control form-control-lg" id="birthdayDate" name="email" placeholder="Email"  required> <span style="color: red;">*</span>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <h6 class="mb-2 pb-1">Class: </h6>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="class"
+                      id="8"
+                      value=8
+                      
+                    />
+                    <label class="form-check-label" for="8">8th</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="class"
+                      id="9"
+                      value=9
+                    />
+                    <label class="form-check-label" for="9">9th</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="class"
+                      id="10"
+                      value=10
+                    />
+                    <label class="form-check-label" for="10">10th</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                   <input type="password" name="password" id="emailAddress" class="form-control form-control-lg"  placeholder="password"  required> <span style="color: red;">*</span>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="password" name="cpassword" class="form-control form-control-lg" placeholder="confirm password"  required> <span style="color: red;">*</span>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                   <input type="number" name="rollno" class="form-control form-control-lg" placeholder="roll_no"required > <span style="color: red;">*</span>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                     <input type="text" name="address" class="form-control form-control-lg" placeholder="address">
+                  </div>
+
+                </div>
+                
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+                  <div class="form-outline">
+                    <input type="tel" name="phone" class="form-control form-control-lg" placeholder="Mobile number">
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="mt-4 pt-2 d-flex justify-content-center"  >
+                <input class="btn btn-primary btn-lg "  type="submit" value="Submit" />
+              </div>
+             
+            </form>
+            <br>
+            <p style="text-align: center;">Already have an account then <a href="/signin">click here!</a> </p> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
